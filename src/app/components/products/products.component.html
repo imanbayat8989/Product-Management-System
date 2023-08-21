@@ -17,6 +17,8 @@
         <td>{{product.type}}</td>
         <td>{{product.color}}</td>
         <td>{{product.price | currency: '€'}}</td>
+        <td><a [routerLink]="['/products','edit',product.id]">Edit</a></td>
+        <td><a [routerLink]="[]" (click)="deleteProduct(product.id)">Delete</a></td>
       </tr>
     </tbody>
   </table>
